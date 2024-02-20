@@ -2,7 +2,7 @@ import { Column, Entity, ObjectIdColumn, PrimaryColumn } from 'typeorm';
 
 @Entity('Lesson')
 export class Lesson {
-  @ObjectIdColumn()  
+  @ObjectIdColumn()
   _id: string;
   @PrimaryColumn()
   id: string;
@@ -12,6 +12,6 @@ export class Lesson {
   startDate: string;
   @Column()
   endDate: string;
-  @Column()
+  @Column({ default: [] })
   students: string[];
 }

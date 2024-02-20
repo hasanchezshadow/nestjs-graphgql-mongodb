@@ -16,7 +16,6 @@ export class LessonService {
   createLesson(createLessonInput: CreateLessonInput): Promise<Lesson> {
     const lesson = this.lessonRespository.create({
       id: uuid(),
-      students: [],
       ...createLessonInput,
     });
     return this.lessonRespository.save(lesson);
