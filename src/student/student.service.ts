@@ -22,4 +22,8 @@ export class StudentService {
   getStudents(): Promise<Student[]> {
     return this.studentRespository.find({});
   }
+
+  getStudent(id: string): Promise<Student> {
+    return this.studentRespository.findOneBy({ id });
+  }
 }
